@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body class="p-8">
+    <!-- Header -->
+    <nav class="flex justify-between p6 items-center w-full">
+        <div class="flex gap-1 items-end bg-gradient-to-r from-blue-500 to-cyan-300">
+            <img src="./assets/quiz 1.png" alt="quiz-logo" class="w-8">
+            <h2 class="text-xl font-black align-baseline">TRIVIA</h2>
+        </div>
+        <!-- <img src="./assets/alex-starnes-WYE2UhXsU1Y-unsplash.jpg" alt="" class="w-8 rounded-full"> -->
+        <div class="border-2 border-blue-500 px-1.5 py-1 rounded-full text-xs"><i class="fa-regular fa-user"
+                style="color: #3b82f6;"></i></div>
+    </nav>
+
+    <!-- Select Category -->
+    <div class="flex flex-col md:flex-row">
+        <div>
+            <img src="./assets/airy-startup-business-start-up-and-entrepreneurship-woman-on-a-rocket.png" alt="" class="filter hue-rotate-15 mt-12">
+        </div>
+
+        <div class="p-4">
+            <h1 class="text-4xl font-bold text-blue-500">Hi There!</h1>
+            <div class="mb-4">
+                <label for="category" class="text-3xl font-semibold">Please select a Category:</label><br>
+                <select id="category" class="p-2 border w-56 rounded-md">
+                    <!-- Options for categories -->
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty" class="p-2 border rounded-md">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button id="startButton" class="p-2 bg-blue-500 text-white rounded-md">Start Trivia</button>
+        </div>
+        
+        <div id="questionsContainer" class="p-4">
+            <!-- Questions will be displayed here -->            
+        </div>
+        <div id="scoreContainer" class="hidden"></div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
